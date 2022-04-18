@@ -8,9 +8,7 @@ const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const tagHeader = `"${tag}" 태그에 ${totalCount} 개의 글이 있습니다.`
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -27,7 +25,7 @@ const Tags = ({ pageContext, data, location }) => {
           )
         })}
       </ul>
-      <Link to="/tags">All tags</Link>
+      <Link to="/tags">태그 목록 보기</Link>
     </Layout>
   )
 }
