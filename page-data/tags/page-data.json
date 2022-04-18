@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-tags-js",
+    "path": "/tags/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"group":[{"fieldValue":"Gatsby","totalCount":1},{"fieldValue":"React","totalCount":1},{"fieldValue":"Tag Example","totalCount":1}]}},"pageContext":{}},
+    "staticQueryHashes": ["3000541721"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/react/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/new-beginnings/"},"frontmatter":{"title":"테스트 글"}}}]}},"pageContext":{"tag":"React"}},
+    "staticQueryHashes": ["3000541721"]}
