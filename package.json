@@ -46,11 +46,12 @@
     "url": "git+https://github.com/wdl/dev-docs.git"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npx gatsby build",
+    "develop": "npx gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "start": "npx gatsby develop",
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
+    "deploy": "npx gatsby build && gh-pages -d public -b deploy"
   }
 }
