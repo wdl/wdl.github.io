@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import TagCard from "../components/tag-card"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -33,28 +34,31 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+              <Link to={post.fields.slug} itemProp="url">
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <header>
                       <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
+                  </header>
+                  <section>
+                    {post.frontmatter.description || post.excerpt}
+                  </section>
+                  <footer>
+                    {post.frontmatter.date}
+                    <span className="separator">·</span>
+                    {
+                      post.frontmatter.tags.map((tag) => {
+                        return (
+                          <TagCard key={tag} tag={tag} />
+                        )
+                      })
+                    }
+                  </footer>
+                </article>
+              </Link>
             </li>
           )
         })}
@@ -79,9 +83,10 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
+          tags
         }
       }
     }

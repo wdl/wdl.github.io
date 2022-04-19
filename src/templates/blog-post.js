@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import kebabCase from "lodash.kebabcase"
+// import kebabCase from "lodash.kebabcase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <div className="tags">
+        {/* <div className="tags">
           <ul>
           {post.frontmatter.tags
             ? post.frontmatter.tags.map(tag => (
@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data, location }) => {
               ))
           : null}
           </ul>
-        </div>
+        </div> */}
         <footer>
           <Bio />
         </footer>
@@ -96,7 +96,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일")
         description
         tags
       }
