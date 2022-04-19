@@ -49,8 +49,14 @@ const Layout = ({ location, title, children }) => {
         </Link>
       </header>
       <main className="main-wrapper">{children}</main>
-      <footer>
-        Copyright © Elenchus All rights reserved.
+      <footer className="global-footer">
+        <div className="footer-list">
+          <Link to="/">Home</Link>
+          <Link to="/tags">Tags</Link>
+        </div>
+        <div className="copylight">
+          Copyright © Elenchus All rights reserved.
+        </div>
       </footer>
     </div>
   )

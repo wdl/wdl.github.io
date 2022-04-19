@@ -58,6 +58,7 @@
   --fontSize-7: 2.986rem;
   /* colors light mode */
   --color-background-light-mode: #ffffff;
+  --color-background-thick-light-mode: #eaeaea;
   --color-shadow-light-mode: #cbcbcb;
   --color-primary-light-mode: #005b99;
   --color-title-light-mode: #1e1e1e;
@@ -67,6 +68,7 @@
   --color-accent-light-mode: #d1dce5;
   /* colors dark mode */
   --color-background-dark-mode: #ffffff;
+  --color-background-thick-light-mode: #eaeaea;
   --color-shadow-dark-mode: #cbcbcb;
   --color-primary-dark-mode: #005b99;
   --color-title-dark-mode: #1e1e1e;
@@ -77,6 +79,7 @@
   --color-accent-light-mode: #d1dce5;
   /* colors */
   --color-background: var(--color-background-light-mode);
+  --color-background-thick: var(--color-background-thick-light-mode);
   --color-shadow: var(--color-shadow-light-mode);
   --color-primary: var(--color-primary-light-mode);
   --color-title: var(--color-title-light-mode);
@@ -263,13 +266,13 @@ a:focus {
 }
 
 /* Custom classes */
-
+/* 
 .global-wrapper {
-  /* padding: 0 var(--spacing-5) var(--spacing-10) var(--spacing-5); */
-}
+  padding: 0 var(--spacing-5) var(--spacing-10) var(--spacing-5);
+} */
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
+  margin-bottom: var(--spacing-12);
 }
 
 .global-header {
@@ -315,6 +318,29 @@ a:focus {
   font-style: var(--fontFamily-sans);
 }
 
+.global-footer {
+  padding: 0;
+  width: var(--maxWidth-full);
+  background-color: var(--color-background-thick);
+  text-align: center;
+}
+
+.global-footer .footer-list {
+  padding: var(--spacing-8);
+}
+
+.global-footer .footer-list a {
+  font-family: var(--fontFamily-en-sans);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-title);
+  padding: 0 var(--spacing-6);
+}
+
+.global-footer .copylight {
+  padding: 0 0 var(--spacing-4) 0;
+  font-size: var(--fontSize-0);
+}
+
 .main-wrapper {
   margin: 60px auto var(--spacing-0) auto;
   padding-top: var(--spacing-10);
@@ -350,7 +376,7 @@ a:focus {
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-8);
 }
 
 .bio p {
@@ -362,6 +388,7 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
+  border: 1px solid var(--color-shadow);
 }
 
 .blog-post header h1 {
