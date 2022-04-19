@@ -1,7 +1,7 @@
 ---
 title: Typescript에 ESLint 적용하기
 date: "2022-04-19T23:19:00.000+09:00"
-description: Typescript에 ESLint 적용하기
+description: Typescript로 개발할 때 정적 코드 분석 도구 ESLint를 적용하여 코딩 컨벤션을 통일하자.
 tags:
     - Typescript
     - ESLint
@@ -59,9 +59,10 @@ npx tsc -init
 
 ## Linting Script 추가
 
-`package.json`의 `"scripts"` 부분에 아래와 같이 Linting script 추가
+`package.json`의 `scripts` 부분에 아래와 같이 Linting script 추가
 
 ```javascript
+// package.json
 "scripts": {
   // ...
   "lint": "eslint src/**/*.ts",
