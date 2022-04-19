@@ -20,8 +20,8 @@ const TagsPage = ({
   return (
     <Layout location={location} title={title}>
       <Seo
-        title="all tags"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="All Tags"
+        keywords={[`javascript`, `react`]}
       />
       <div className="tag-list">
         <h1>Tags</h1>
