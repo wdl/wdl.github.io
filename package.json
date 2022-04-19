@@ -57,6 +57,6 @@
     "start": "npx gatsby develop",
     "serve": "npx gatsby serve",
     "clean": "npx gatsby clean",
-    "deploy": "npx gatsby build && gh-pages -d public -b deploy"
+    "deploy": "npx gatsby build && npx gh-pages -d public -b deploy"
   }
 }
