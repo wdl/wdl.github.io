@@ -48,13 +48,18 @@ const BlogIndex = ({ data, location }) => {
                   </section>
                   <footer>
                     {post.frontmatter.date}
-                    <span className="separator">·</span>
+                    { post.frontmatter.tags
+                      ? ( <span className="separator">·</span> )
+                      : null
+                    }
                     {
-                      post.frontmatter.tags.map((tag) => {
-                        return (
-                          <TagCard key={tag} tag={tag} />
-                        )
-                      })
+                      post.frontmatter.tags
+                        ? post.frontmatter.tags.map((tag) => {
+                          return (
+                            <TagCard key={tag} tag={tag} />
+                          )
+                        })
+                        : null
                     }
                   </footer>
                 </article>

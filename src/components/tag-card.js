@@ -3,12 +3,13 @@
  */
 
 import * as React from "react"
+import { Link } from "gatsby"
 import uniqolor from "uniqolor";
 import kebabCase from "lodash.kebabcase"
 
 import store from "../redux/store";
 
-const TagCard = ({ tag }) => {
+const TagCard = ({ tag, isLink = false }) => {
 
     let tagColorOption;
     if (store.getState().interface === "light") {
@@ -27,11 +28,19 @@ const TagCard = ({ tag }) => {
 
     const tagColor = uniqolor(tag, tagColorOption)
 
-    return (
-        <span className="tag-card" style={{backgroundColor: tagColor.color}}>
-            {kebabCase(tag)}
-        </span>
-    )
+    if (isLink) {
+        return (
+            <Link to={`/tags/${kebabCase(tag)}`} className="tag-card" style={{backgroundColor: tagColor.color}}>
+                {kebabCase(tag)}
+            </Link>
+        )
+    } else {
+        return (
+            <span className="tag-card" style={{backgroundColor: tagColor.color}}>
+                {kebabCase(tag)}
+            </span>
+        )
+    }
 }
 
 export default TagCard

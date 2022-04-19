@@ -1,11 +1,10 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-// import kebabCase from "lodash.kebabcase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
+import TagCard from "../components/tag-card"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -25,24 +24,24 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p className="date">{post.frontmatter.date}</p>          
+          <div className="tags">
+            {
+              post.frontmatter.tags
+              ? post.frontmatter.tags.map((tag) => {
+                return (
+                  <TagCard key={tag} tag={tag} isLink={true} />
+                )
+              })
+              : null
+            }
+          </div>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
-        {/* <div className="tags">
-          <ul>
-          {post.frontmatter.tags
-            ? post.frontmatter.tags.map(tag => (
-              <li key={kebabCase(tag)}>
-                <Link to={`/tags/${kebabCase(tag)}`}>{kebabCase(tag)}</Link>
-              </li>
-              ))
-          : null}
-          </ul>
-        </div> */}
         <footer>
           <Bio />
         </footer>
