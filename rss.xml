@@ -1,12 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web Developer]]></description><link>https://wdl.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Apr 2022 14:21:21 GMT</lastBuildDate><item><title><![CDATA[Typescript에 ESLint 적용하기]]></title><description><![CDATA[테스트]]></description><link>https://wdl.github.io/use-eslint-with-typescript/</link><guid isPermaLink="false">https://wdl.github.io/use-eslint-with-typescript/</guid><pubDate>Tue, 19 Apr 2022 14:19:00 GMT</pubDate><content:encoded>&lt;h2&gt;테스트&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init
-tsc -init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# TypeScript&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D typescript
-
-&lt;span class=&quot;token comment&quot;&gt;# ESLint packages&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D eslint eslint-config-airbnb-base eslint-plugin-import
-
-&lt;span class=&quot;token comment&quot;&gt;# TypeScript ESLint packages&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[테스트 글]]></title><description><![CDATA[테스트 글]]></description><link>https://wdl.github.io/new-beginnings/</link><guid isPermaLink="false">https://wdl.github.io/new-beginnings/</guid><pubDate>Mon, 18 Apr 2022 08:06:00 GMT</pubDate><content:encoded>&lt;h2&gt;테스트&lt;/h2&gt;
-&lt;p&gt;글&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web Developer]]></description><link>https://wdl.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Apr 2022 15:18:14 GMT</lastBuildDate><item><title><![CDATA[Typescript에 ESLint 적용하기]]></title><description><![CDATA[환경    Node.js 프로젝트 초기 설정  파일 생성됨. Typescript 및 ESLint 패키지 설치 코딩컨벤션은 eslint-config-naver를 사용함. Typescript 초기 설정  파일 생성됨. ESLint Config…]]></description><link>https://wdl.github.io/use-eslint-with-typescript/</link><guid isPermaLink="false">https://wdl.github.io/use-eslint-with-typescript/</guid><pubDate>Tue, 19 Apr 2022 14:19:00 GMT</pubDate><content:encoded>&lt;h2&gt;환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm 8.1.2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tsc Version 4.6.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;eslint v8.13.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Node.js 프로젝트 초기 설정&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 파일 생성됨.&lt;/p&gt;
+&lt;h2&gt;Typescript 및 ESLint 패키지 설치&lt;/h2&gt;
+&lt;p&gt;코딩컨벤션은 &lt;a href=&quot;https://github.com/naver/eslint-config-naver&quot;&gt;eslint-config-naver&lt;/a&gt;를 사용함.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D typescript
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D eslint eslint-config-naver eslint-plugin-import
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Typescript 초기 설정&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx tsc -init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;tsconfig.json&lt;/code&gt; 파일 생성됨.&lt;/p&gt;
+&lt;h2&gt;ESLint Config 생성&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.eslintrc&lt;/code&gt; 파일을 생성하여 아래 내용 작성.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// .eslintrc&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;parser&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@typescript-eslint/parser&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;@typescript-eslint&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// Naver Javascript Coding Conventions 적용&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;naver&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 만약 ES5인 경우 &quot;naver/es5&quot;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// TypeScript ESLint recommanded style 적용&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;plugin:@typescript-eslint/eslint-recommended&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Linting Script 추가&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; 부분에 아래와 같이 Linting script 추가&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// package.json&lt;/span&gt;
+&lt;span class=&quot;token string-property property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;lint&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eslint src/**/*.ts&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string-property property&quot;&gt;&quot;lint:fix&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eslint --fix src/**/*.ts&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>

@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-tags-js",
     "path": "/tags/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"group":[{"fieldValue":"Gatsby","totalCount":2},{"fieldValue":"React","totalCount":2},{"fieldValue":"Tag Example","totalCount":2}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"group":[{"fieldValue":"ESLint","totalCount":1},{"fieldValue":"Typescript","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": ["3000541721"]}
