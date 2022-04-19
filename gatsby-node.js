@@ -38,11 +38,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
-
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
+
+  const posts = result.data.allMarkdownRemark.nodes
 
   let tags = new Set()
   if (posts.length > 0) {
@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: `/docs${post.fields.slug}`,
         component: blogPost,
         context: {
           id: post.id,
@@ -68,7 +68,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const postsPerPage = 10;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    const isFirstPage = i === 0;
+    const currentPage = i + 1;
+    createPage({
+      path: isFirstPage ? "/" : `/page/${currentPage}`,
+      component: path.resolve("./src/templates/blog-list.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage,
+      },
+    });
+  });
+
+  const tagTemplate = path.resolve("./src/templates/tags.js")
   tags.forEach(tag => {
     createPage({
       path: `/tags/${kebabCase(tag)}/`,

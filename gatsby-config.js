@@ -6,7 +6,7 @@ module.exports = {
       summary: `Web Developer`,
     },
     description: `Web Developer`,
-    siteUrl: `https://xxx.io/`
+    siteUrl: `https://wdl.github.io`
   },
   plugins: [
     `gatsby-plugin-image`,

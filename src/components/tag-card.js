@@ -9,14 +9,22 @@ import kebabCase from "lodash.kebabcase"
 
 import store from "../redux/store";
 
-const TagCard = ({ tag, isLink = false }) => {
+const TagCard = ({ tag, isCard = true, isLink = false, isKebabCase = true }) => {
 
     let tagColorOption;
     if (store.getState().interface === "light") {
-        tagColorOption = {
-            saturation: [35, 65],
-            lightness: 85,
-            differencePoint: 50,
+        if (isCard) {
+            tagColorOption = {
+                saturation: [35, 65],
+                lightness: 85,
+                differencePoint: 50,
+            }
+        } else {
+            tagColorOption = {
+                saturation: [35, 65],
+                lightness: 50,
+                differencePoint: 50,
+            }
         }
     } else {
         tagColorOption = {
@@ -27,17 +35,19 @@ const TagCard = ({ tag, isLink = false }) => {
     }
 
     const tagColor = uniqolor(tag, tagColorOption)
+    const tagClassName = isCard ? "tag-card" : "tag-string"
+    const tagStyle = isCard ? { backgroundColor: tagColor.color } : { color: tagColor.color }
 
     if (isLink) {
         return (
-            <Link to={`/tags/${kebabCase(tag)}`} className="tag-card" style={{backgroundColor: tagColor.color}}>
-                {kebabCase(tag)}
+            <Link to={`/tags/${kebabCase(tag)}`} className={tagClassName} style={tagStyle}>
+                {isKebabCase ? kebabCase(tag) : tag}
             </Link>
         )
     } else {
         return (
-            <span className="tag-card" style={{backgroundColor: tagColor.color}}>
-                {kebabCase(tag)}
+            <span className={tagClassName} style={tagStyle}>
+                {isKebabCase ? kebabCase(tag) : tag}
             </span>
         )
     }

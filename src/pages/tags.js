@@ -1,7 +1,9 @@
 import React from "react"
+import { graphql, navigate } from "gatsby"
+
 import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
 import Seo from "../components/seo"
+import TagCard from "../components/tag-card"
 
 var kebabCase = require("lodash.kebabcase")
 
@@ -13,26 +15,30 @@ const TagsPage = ({
     },
   },
   location,
-}) => (
-  <Layout location={location} title={title}>
-    <Seo
-      title="all tags"
-      keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-    />
-    <div>
-      <h1>태그 목록</h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </Layout>
-)
+}) => {
+
+  return (
+    <Layout location={location} title={title}>
+      <Seo
+        title="all tags"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <div className="tag-list">
+        <h1>Tags</h1>
+        <table>
+          <tbody>
+            {group.map(tag => (
+              <tr key={tag.fieldValue} onClick={() => { navigate(`/tags/${kebabCase(tag.fieldValue)}/`) }}>
+                <td className="tag-name"><TagCard tag={tag.fieldValue} isCard={false} isKebabCase={false} /></td>
+                <td className="post-count">{tag.totalCount}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Layout>
+  )
+}
 
 export default TagsPage
 
