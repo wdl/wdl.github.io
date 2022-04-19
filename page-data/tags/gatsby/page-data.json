@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/gatsby/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/new-beginnings/"},"frontmatter":{"title":"테스트 글"}}}]}},"pageContext":{"tag":"Gatsby"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/new-beginnings/"},"frontmatter":{"date":"2022-04-18","title":"테스트 글","description":"테스트글","tags":["Gatsby","React","Tag Example"]}}}]}},"pageContext":{"tag":"Gatsby"}},
     "staticQueryHashes": ["3000541721"]}
