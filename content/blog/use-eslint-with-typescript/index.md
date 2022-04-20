@@ -23,11 +23,11 @@ npm init
 
 ## Typescript 및 ESLint 패키지 설치
 
-코딩컨벤션은 [eslint-config-naver](https://github.com/naver/eslint-config-naver)를 사용함.
+코딩컨벤션은 [eslint-config-airbnb](https://github.com/airbnb/javascript)를 사용함.
 
 ```bash
 npm i -D typescript
-npm i -D eslint eslint-config-naver eslint-plugin-import
+npm i -D eslint eslint-config-airbnb eslint-plugin-import
 npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
@@ -49,8 +49,8 @@ npx tsc -init
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
-    // Naver Javascript Coding Conventions 적용
-    "naver", // 만약 ES5인 경우 "naver/es5"
+    // Airbnb JavaScript Style Guide 적용
+    "airbnb",
     // TypeScript ESLint recommanded style 적용
     "plugin:@typescript-eslint/eslint-recommended"
   ]
