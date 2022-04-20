@@ -43,6 +43,8 @@
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
   --fontSize-root: 16px;
+  --fontSize-root-mobile: 12px;
+  --fontSize-root-tablet: 14px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -325,7 +327,7 @@ a {
 
 .main-wrapper {
   margin: 60px auto var(--spacing-0) auto;
-  padding: var(--spacing-10) 0 var(--spacing-8) 0;
+  padding: var(--spacing-10) var(--spacing-4) var(--spacing-8) var(--spacing-4);
   max-width: var(--maxWidth-wrapper);
 }
 
@@ -508,13 +510,18 @@ a.tag-card:hover {
 
 /* Media queries */
 
-@media (max-width: 42rem) {
+@media (max-width: 480px) {
+  html {
+    font-size: var(--fontSize-root-mobile);
+  }
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
   }
-  ul,
-  ol {
-    list-style-position: inside;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: var(--fontSize-root-tablet);
   }
 }
