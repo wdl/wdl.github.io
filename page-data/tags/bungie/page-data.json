@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/bungie/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Elenchus' Dev Docs"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/use-bungie-net-api-basic/"},"frontmatter":{"date":"2022-04-21","title":"Bungie.Net API 사용하기 기초","description":"Destiny와 관련된 서비스 개발을 위해 Bungie.Net API를 사용하는 법을 간단하게 알아보자.","tags":["Bungie","OAuth"]}}}]}},"pageContext":{"tag":"Bungie"}},
+    "staticQueryHashes": ["3000541721"]}
